@@ -1,0 +1,16 @@
+{
+  "name": "exercises",
+  "private": true,
+  "description": "javascript exercises",
+  "scripts": {
+    "test": "echo \"Error: run npm test from inside the directories or do 'npm run test-all'\" && exit 1",
+    "test-all": "mocha '**/test.js'"
+  },
+  "author": "markehost",
+  "contributors": [ "Mark Host", "Jason Poteet", "Jeremy Williams", "Alex Wilson" ],
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "sinon": "^1.15.3"
+  }
+}
