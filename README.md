@@ -35,6 +35,6 @@ If you're want to contribute please adhere to the current structure.
 
 
 
-##### Credits
+## Credits
 
 I used this project https://github.com/kolodny/exercises as a structural example.  I wanted to do things a little different so I didn't fork the repo, but it's worth checking out for some solid JavaScript functions that [lodash](https://lodash.com/) and [underscore](http://underscorejs.org/) abstract away from us. 
