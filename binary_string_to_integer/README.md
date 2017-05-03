@@ -13,5 +13,3 @@ function binaryStringToInteger(str) {
 module.exports = binaryStringToInteger
 
 ```
-
-More info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
