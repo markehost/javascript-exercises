@@ -1,4 +1,4 @@
-Write a function that takes a binary string and converts it to an integer.  You can't use any built in libraries of number.
+Write a function that takes a binary string and converts it to an integer.  You can't use any built in Javascript methods of `Number` or `String`.  Build a function as if you had to natively implement this operation.
 
 Below is a start on the `index.js` file we will create in the `solutions` branch.
 
