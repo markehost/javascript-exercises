@@ -4,18 +4,7 @@ var isInteger = require('./');
 
 describe('isInteger - ', function() {
 
-	describe('integer literals - ', function() {
-		it('nagative integer string', function() {
-			assert.equal( isInteger('-9'), true );
-		});
-
-		it('zero string', function() {
-			assert.equal( isInteger('0'), true );
-		});
-
-		it('positive integer string', function() {
-			assert.equal( isInteger('8'), true );
-		});
+	describe('Number - ', function() {
 
 		it('negative integer number', function() {
 			assert.equal( isInteger(-9), true );
@@ -29,16 +18,8 @@ describe('isInteger - ', function() {
 			assert.equal( isInteger(98), true );
 		});
 
-		it('Octal integer literal string', function() {
-			assert.equal( isInteger('0o44'), true );
-		});
-
 		it('Octal integer literal', function() {
 			assert.equal( isInteger(0o44), true );
-		});
-
-		it('Hexadecimal integer literal string', function() {
-			assert.equal( isInteger("0x3b24"), true );
 		});
 
 		it('Hexadecimal integer literal', function() {
@@ -47,30 +28,56 @@ describe('isInteger - ', function() {
 
 	})
 
+	describe('String - ', function() {
+		it('negative integer string', function() {
+			assert.equal( isInteger('-9'), false );
+		});
+
+		it('zero string', function() {
+			assert.equal( isInteger('0'), false );
+		});
+
+		it('positive integer string', function() {
+			assert.equal( isInteger('8'), false );
+		});
+
+		it('Octal integer literal string', function() {
+			assert.equal( isInteger('0o44'), false );
+		});
+
+		it('Hexadecimal integer literal string', function() {
+			assert.equal( isInteger("0x3b24"), false );
+		});
+
+	})
+
 	describe('flotaing point literals - ', function() {
+
+
 		it('negative floating point string', function() {
-			assert.equal( isInteger('-3.9'), true );
+			assert.equal( isInteger('-3.9'), false );
 		});
 
 		it('positive floating point string', function() {
-			assert.equal( isInteger('5.4'), true );
+			assert.equal( isInteger('5.4'), false );
 		});
 
 		it('negative floating point number', function() {
-			assert.equal( isInteger(-9.888), true );
+			assert.equal( isInteger(-9.888), false );
 		});
 
 		it('positive floating point number', function() {
-			assert.equal( isInteger(6.6777), true );
+			assert.equal( isInteger(6.6777), false );
 		});
 
-		it('exponential notation', function() {
+		it('exponential notation - is an integer', function() {
 			assert.equal( isInteger(9e6), true );
 		});
 
 		it('exponential notation string', function() {
-			assert.equal( isInteger('7e67'), true );
+			assert.equal( isInteger('7e67'), false );
 		});
+
 	})
 
 	describe('non-numeric values', function() {
@@ -121,6 +128,10 @@ describe('isInteger - ', function() {
 
 		it('NaN Value', function() {
 			assert.equal( isInteger(NaN), false );
+		});
+
+		it('math pi', function() {
+			assert.equal( isInteger(Math.PI), false );
 		});
 
 		it('Infinity primitive', function() {
