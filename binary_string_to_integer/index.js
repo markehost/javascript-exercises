@@ -1,10 +1,17 @@
 
 function binaryStringToInteger(b) {
 
-	// console.log("number -->", b);
-	// console.log("is integer??? -->", ( b^0 ) === b);
+	// split the binary string into an array then reverse it
+	let reverse = b.split('').reverse();
+	let sum = 0;
 
-	return parseInt( b, 2 )
+	// go through the array, multiply each index by the base 2 to the i exponent, then add to the running total
+	for ( let i = 0; i < reverse.length; i++ ) {
+		// sum += reverse[i] * Math.pow( 2, i )
+		sum += Number(reverse[i]) * Math.pow( 2, i )
+	}
+
+	return sum
 }
 
 module.exports = binaryStringToInteger

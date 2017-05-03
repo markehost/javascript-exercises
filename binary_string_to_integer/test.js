@@ -18,6 +18,10 @@ describe('Convert binary string to integer - ', function() {
 			assert.equal( binaryStringToInteger('10101010101010101010101010101'), 357913941 );
 		});
 
+		it('special binary', function() {
+			assert.equal( binaryStringToInteger('01111010101'), 981 );
+		});
+
 	})
 
 	// describe('Number - ', function() {
